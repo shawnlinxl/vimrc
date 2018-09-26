@@ -220,8 +220,7 @@ if &term =~ '256color'
 endif
 
 
-"" Disable the blinking cursor.
-set gcr=a:blinkon0
+"" Always keep at least three lines above and below cursor
 set scrolloff=3
 
 "" Status bar
@@ -247,7 +246,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'papercolor'
+let g:airline_theme = 'onedark'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
