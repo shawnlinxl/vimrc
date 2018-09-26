@@ -77,6 +77,7 @@ Plug 'honza/vim-snippets'
 Plug 'tomasr/molokai'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'joshdick/onedark.vim'
 
 "*****************************************************************************
 "" Custom bundles
@@ -176,11 +177,11 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 set number
+set relativenumber
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  set background=dark
-  colorscheme PaperColor
+  colorscheme onedark
 endif
 
 set mousemodel=popup
@@ -459,6 +460,10 @@ noremap <C-h> <C-w>h
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
+
+"" move visual lines when not using in combination with another command
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
 
 "" Move visual block
 vnoremap J :m '>+1<CR>gv=gv
