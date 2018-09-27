@@ -31,20 +31,20 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary' " to conveniently comment lines and paragraphs
+Plug 'tpope/vim-fugitive' " git integration
+Plug 'vim-airline/vim-airline' " status line
 Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter' " git realtime status on left of line number
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate' " auto quote or () completion
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
-Plug 'Yggdroot/indentLine'
+Plug 'scrooloose/syntastic' " syntax checking
+Plug 'Yggdroot/indentLine' " show lines for indented blocks
 Plug 'avelino/vim-bootstrap-updater'
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' " multiple language format/syntax support
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
